@@ -100,7 +100,7 @@ fun SignUpScreen(
     LaunchedEffect(key1 = registerState) {
         when (registerState.registerState) {
             is RegisterState.Error -> {
-                val error = (registerState.registerState as RegisterState.Error).message
+                val error = registerState.registerState.message
                 Toast
                     .makeText(
                         context,
