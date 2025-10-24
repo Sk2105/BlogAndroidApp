@@ -64,7 +64,7 @@ class AuthRepoImpl(
                 val errorMessage =
                     Json.decodeFromString<ErrorModel>(errorResponse!!.string())
                 println("loginUser errorMessage: ${errorMessage.error}")
-                throw Exception(errorMessage.error)
+                throw Exception("Something went wrong")
             }
         }
     }
